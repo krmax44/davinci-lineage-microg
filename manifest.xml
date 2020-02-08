@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="packages/apps/Backgrounds" name="LineageOS/android_packages_apps_Backgrounds" revision="lineage-17.1" />
+
+  <!-- Extra packages not included in the main manifest -->
+  <project path="device/xiaomi/common" name="LineageOS/android_device_xiaomi_common" />
+
+  <!-- Device specific repositories -->
+  <project name="sm6150-dev/android_device_xiaomi_davinci" path="device/xiaomi/davinci" remote="github" revision="lineage-17.1" />
+  <project name="sm6150-dev/android_device_xiaomi_sm6150-common" path="device/xiaomi/sm6150-common" remote="github" revision="lineage-17.1" />
+  <project name="sm6150-dev/android_kernel_xiaomi_sm6150" path="kernel/xiaomi/sm6150" remote="github" revision="lineage-17.1" />
+  <project name="sm6150-dev/android_kernel_xiaomi_msm-4.14" path="kernel/xiaomi/msm-4.14" remote="github" revision="lineage-17.0" />
+  <project name="sm6150-dev/vendor_xiaomi" path="vendor/xiaomi" remote="github" revision="lineage-17.1" />
+
+  <!-- MicroG prebuilts -->
+  <project name="lineageos4microg/android_prebuilts_prebuiltapks" path="prebuilts/prebuiltapks" remote="github" revision="master" />
+</manifest>
