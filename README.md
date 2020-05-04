@@ -7,3 +7,14 @@ Once `davinci` becomes an official LineageOS device, updates from me will stop a
 ## Installation
 
 Once you unlocked the bootloader and installed the official [TWRP recovery](https://twrp.me/xiaomi/xiaomimi9t.html), you can boot to TWRP and flash the downloaded ZIP from the latest release.
+
+## Building yourself
+
+You'll need Docker and Git installed.
+
+```bash
+git clone https://github.com/krmax44/davinci-lineage-microg.git
+cd davinci-lineage-microg
+chmod +x build.sh
+./build.sh
+```
