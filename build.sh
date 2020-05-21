@@ -3,7 +3,7 @@ docker build https://github.com/SolidHal/docker-lineage-cicd.git#lineageos-17.1 
 
 # download latest updates.sh from manifest repo
 mkdir -p scripts
-curl https://raw.githubusercontent.com/sm6150-dev/manifest/lineage-17.1/updates.sh > scripts/updates.sh
+curl https://raw.githubusercontent.com/sm6150-dev/manifest/lineage-17.1/updates.sh > scripts/pre-build.sh
 
 # start the build
 docker run \

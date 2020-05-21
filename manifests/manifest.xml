@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="glab" fetch="ssh://git@gitlab.com" />
+  <remote name="glab" fetch="https://gitlab.com" />
 
   <!-- Device specific repositories -->
   <project name="sm6150-dev/android_device_xiaomi_common" path="device/xiaomi/common" remote="github" revision="lineage-17.0" />
