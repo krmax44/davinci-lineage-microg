@@ -14,8 +14,7 @@ sha256=($(sha256sum "$file"))
 md5=($(md5sum "$file"))
 
 # release message: first line is title
-message="$base\nsha256: \`$sha256\`\nmd5: \`$md5\`"
-
+message="$base"$'\n\n'"sha256: \`$sha256\`"$'\n'"md5: \`$md5\`"
 
 # create draft release
 hub release create -d -a "$file" -m "$message" "$tag"
