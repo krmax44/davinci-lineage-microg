@@ -10,11 +10,14 @@ Once you unlocked the bootloader and installed the official [TWRP recovery](http
 
 ## Building yourself
 
-You'll need Docker and Git installed.
+See the [build script repo](https://github.com/krmax44/lineageos-microg-builder).
 
-```bash
-git clone https://github.com/krmax44/davinci-lineage-microg.git
-cd davinci-lineage-microg
-chmod +x build.sh
-./build.sh
-```
+## Sources
+
+- [device tree](https://github.com/sm6150-dev/android_device_xiaomi_davinci)
+- [common tree](https://github.com/sm6150-dev/android_device_xiaomi_sm6150-common)
+- [kernel](https://github.com/sm6150-dev/android_kernel_xiaomi_sm6150)
+- [hardware](https://github.com/sm6150-dev/android_hardware_xiaomi)
+- [proprietary blobs](https://gitlab.com/pig.priv/proprietary_vendor_xiaomi)
+- [microG prebuilts](https://github.com/SolidHal/android_prebuilts_prebuiltapks)
+
