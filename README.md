@@ -1,3 +1,9 @@
+# Official builds now available! 🎉
+
+See https://download.lineage.microg.org/davinci/.
+
+---
+
 # Lineage for microG builds for the Xiaomi Mi 9T/Redmi K20 (davinci)
 
 Under [Releases](https://github.com/krmax44/davinci-lineage-microg/releases), you can find unofficial LineageOS builds that come with MicroG and F-Droid built-in. If you don't know what MicroG is, you probably want to use the default LineageOS builds.
