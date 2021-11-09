@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://gitlab.com" name="gitlab" />
+  <project name="ArianK16a/android_kernel_xiaomi_sm6150" path="kernel/xiaomi/sm6150" remote="github" />
+  <project name="xiaomi-sm6150/android_device_xiaomi_davinci" path="device/xiaomi/davinci" remote="github" />
+  <project name="xiaomi-sm6150/android_device_xiaomi_toco" path="device/xiaomi/toco" remote="github" />
+  <project name="xiaomi-sm6150/android_device_xiaomi_sm6150-common" path="device/xiaomi/sm6150-common" remote="github" />
+  <project name="xiaomi-sm6150/android_vendor_xiaomi" path="vendor/xiaomi" remote="github" />
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi/" remote="github" revision="lineage-18.1" />
+  <project name="ArianK16a/android_vendor_extra" path="vendor/translations" remote="github" revision="translations" />
+</manifest>
