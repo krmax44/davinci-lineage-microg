@@ -16,4 +16,4 @@ See the [build script repo](https://github.com/krmax44/lineageos-microg-builder)
 
 ## Sources
 
-See [davinci.xml](./srv/local_manifests/davinci.xml). Big thanks to @Arian16a!
+See [davinci.xml](./srv/local_manifests/davinci.xml). Big thanks to [ArianK16a](https://github.com/ArianK16a)!
