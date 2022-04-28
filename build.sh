@@ -7,7 +7,7 @@ docker run \
     -e "SIGNATURE_SPOOFING=restricted" \
     -e "INCLUDE_PROPRIETARY=false" \
     -e "CUSTOM_PACKAGES=GmsCore GsfProxy FakeStore IchnaeaNlpBackend NominatimGeocoderBackend FDroid FDroidPrivilegedExtension" \
-    -e "OTA_URL=https://ota.krmax44.de/" \
+    -e "OTA_URL=https://ota.krmax44.de/api" \
     -e "PARALLEL_JOBS=6" \
     -v "$PWD/srv/src:/srv/src" \
     -v "$PWD/srv/zips:/srv/zips" \
