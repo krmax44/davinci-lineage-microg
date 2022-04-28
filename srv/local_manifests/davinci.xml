@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://gitlab.com" name="gitlab" />
-
   <!-- translations for device specific strings -->
   <project name="ArianK16a/android_vendor_extra" path="vendor/translations/" revision="translations" />
 
