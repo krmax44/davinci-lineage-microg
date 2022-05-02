@@ -12,7 +12,7 @@ OTA updates are available.
 
 ## Building yourself
 
-See the [build script repo](https://github.com/krmax44/lineageos-microg-builder).
+As simple as running [./build.sh](./build.sh).
 
 ## Sources
 
