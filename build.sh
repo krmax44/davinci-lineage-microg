@@ -15,4 +15,4 @@ docker run \
     -v "$PWD/srv/ccache:/srv/ccache" \
     -v "$PWD/srv/keys:/srv/keys" \
     -v "$PWD/srv/local_manifests:/srv/local_manifests" \
-   lineageos4microg/docker-lineage-cicd:lineage-19.1
+   lineageos4microg/docker-lineage-cicd
