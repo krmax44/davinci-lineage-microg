@@ -24,6 +24,9 @@ docker run \
     -v "$PWD/srv/local_manifests:/srv/local_manifests" \
    lineageos4microg/docker-lineage-cicd
 
+read -N 1 -p "Upload artifacts? (y/n)" answer
+if ["$answer" != "y"]; do exit 0; done
+
 for file in "srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
 do
     rclone copy "$file" ota:/ --progress
