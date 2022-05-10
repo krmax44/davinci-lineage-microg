@@ -1,8 +1,15 @@
 #!/bin/bash
 
+set -e
+
+device="davinci"
+branch="lineage-19.1"
+tag=$(date "+%G%m%d")
+
+docker pull lineageos4microg/docker-lineage-cicd
 docker run \
-    -e "BRANCH_NAME=lineage-19.1" \
-    -e "DEVICE_LIST=davinci" \
+    -e "BRANCH_NAME=$branch" \
+    -e "DEVICE_LIST=$device" \
     -e "SIGN_BUILDS=true" \
     -e "SIGNATURE_SPOOFING=restricted" \
     -e "INCLUDE_PROPRIETARY=false" \
@@ -16,3 +23,9 @@ docker run \
     -v "$PWD/srv/keys:/srv/keys" \
     -v "$PWD/srv/local_manifests:/srv/local_manifests" \
    lineageos4microg/docker-lineage-cicd
+
+for file in "srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
+do
+    rclone copy "$file" ota:/ --progress
+    gh release upload "$tag" "$file"
+done
