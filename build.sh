@@ -32,9 +32,9 @@ sha256=$(cat "srv/zips/$device/$branch-$tag-UNOFFICIAL-$device.zip.sha256sum" | 
 read -N 1 -p "Create release? (y/n)" answer
 if ["$answer" == "y"]; then
     gh release create \
-        --title "$branch-$tag-UNOFFICIAL-$device"
-        --notes "sha256: `$sha256`" 
-        "$tag"
+        --title "$branch-$tag-UNOFFICIAL-$device" \
+        --notes "sha256: `$sha256`" \
+        "$tag" \
         $files
 fi
 
@@ -45,4 +45,4 @@ if ["$answer" == "y"]; then
     do
         rclone copy "$file" ota:/ --progress
     done
- fi
+fi
