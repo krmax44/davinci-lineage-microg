@@ -6,6 +6,7 @@ device="davinci"
 branch="lineage-19.1"
 tag=$(date "+%G%m%d")
 
+# build
 docker pull lineageos4microg/docker-lineage-cicd
 docker run \
     -e "BRANCH_NAME=$branch" \
@@ -24,10 +25,18 @@ docker run \
     -v "$PWD/srv/local_manifests:/srv/local_manifests" \
    lineageos4microg/docker-lineage-cicd
 
-read -N 1 -p "Upload artifacts? (y/n)" answer
-if ["$answer" != "y"]; do exit 0; done
+# create release
+read -N 1 -p "Create release? (y/n)" answer
+if ["$answer" == "y"]; then
+    gh release create "$tag"
+fi
 
-for file in "srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
+# upload artifacts
+read -N 1 -p "Upload artifacts? (y/n)" answer
+if ["$answer" != "y"]; then exit 0; fi
+
+files="srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
+for file in $files;
 do
     rclone copy "$file" ota:/ --progress
     gh release upload "$tag" "$file"
