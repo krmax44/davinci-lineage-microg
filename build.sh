@@ -26,8 +26,8 @@ docker run \
    lineageos4microg/docker-lineage-cicd
 
 # create release
-files="srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
-sha256=$(cat "srv/zips/$device/$branch-$tag-UNOFFICIAL-$device.zip.sha256sum" | grep -oP "^([a-f0-9]+)")
+files="$PWD/srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
+sha256=$(cat "$PWD/srv/zips/$device/$branch-$tag-UNOFFICIAL-$device.zip.sha256sum" | grep -oP "^([a-f0-9]+)")
 
 read -N 1 -p "Create release? (y/n)" answer
 if [[ "$answer" == "y" ]]; then
