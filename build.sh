@@ -29,20 +29,14 @@ docker run \
 files="$PWD/srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"
 sha256=$(cat "$PWD/srv/zips/$device/$branch-$tag-UNOFFICIAL-$device.zip.sha256sum" | grep -oP "^([a-f0-9]+)")
 
-read -N 1 -p "Create release? (y/n)" answer
-if [[ "$answer" == "y" ]]; then
-    gh release create \
-        --title "$branch-$tag-UNOFFICIAL-$device" \
-        --notes "sha256: \`$sha256\`" \
-        "$tag" \
-        $files
-fi
+gh release create \
+    --title "$branch-$tag-UNOFFICIAL-$device" \
+    --notes "sha256: \`$sha256\`" \
+    "$tag" \
+    $files
 
 # upload artifacts
-read -N 1 -p "Upload artifacts to OTA server? (y/n)" answer
-if [[ "$answer" == "y" ]]; then
-    for file in $files;
-    do
-        rclone copy "$file" ota:/ --progress
-    done
-fi
+for file in $files;
+do
+    rclone copy "$file" ota:/ --progress
+done
