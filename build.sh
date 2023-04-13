@@ -1,29 +1,21 @@
 #!/bin/bash
 
 set -e
+source .env
 
-device="davinci"
-branch="lineage-19.1"
 tag=$(date "+%G%m%d")
 
-# build
-docker pull lineageos4microg/docker-lineage-cicd
+docker pull lineageos4microg/docker-lineage-cicd:lineage-20
+
 docker run \
-    -e "BRANCH_NAME=$branch" \
-    -e "DEVICE_LIST=$device" \
-    -e "SIGN_BUILDS=true" \
-    -e "SIGNATURE_SPOOFING=restricted" \
-    -e "INCLUDE_PROPRIETARY=false" \
-    -e "CUSTOM_PACKAGES=GmsCore GsfProxy FakeStore IchnaeaNlpBackend NominatimGeocoderBackend FDroid FDroidPrivilegedExtension" \
-    -e "OTA_URL=https://ota.krmax44.de/api" \
-    -e "PARALLEL_JOBS=6" \
+    --env-file .env \
     -v "$PWD/srv/src:/srv/src" \
     -v "$PWD/srv/zips:/srv/zips" \
     -v "$PWD/srv/logs:/srv/logs" \
     -v "$PWD/srv/ccache:/srv/ccache" \
     -v "$PWD/srv/keys:/srv/keys" \
     -v "$PWD/srv/local_manifests:/srv/local_manifests" \
-   lineageos4microg/docker-lineage-cicd
+    lineageos4microg/docker-lineage-cicd
 
 # create release
 files="$PWD/srv/zips/$device/$branch-$tag-UNOFFICIAL-$device*"

@@ -4,11 +4,19 @@
   <project name="ArianK16a/android_vendor_extra" path="vendor/translations/" revision="translations" />
 
   <!-- xiaomi specific hardware -->
-  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi/" />
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi/" revision="lineage-20" />
 
   <!-- xiaomi sm6150 specific repositories -->
-  <project name="xiaomi-sm6150/android_device_xiaomi_davinci" path="device/xiaomi/davinci" />
-  <project name="xiaomi-sm6150/android_device_xiaomi_sm6150-common" path="device/xiaomi/sm6150-common" />
-  <project name="ArianK16a/android_kernel_xiaomi_sm6150" path="kernel/xiaomi/sm6150" />
-  <project name="xiaomi-sm6150/android_vendor_xiaomi" path="vendor/xiaomi" />
+  <project name="xiaomi-sm6150/android_device_xiaomi_davinci" path="device/xiaomi/davinci"
+    revision="lineage-20" />
+  <project name="xiaomi-sm6150/android_device_xiaomi_sm6150-common"
+    path="device/xiaomi/sm6150-common" revision="lineage-20" />
+  <project name="ArianK16a/android_kernel_xiaomi_sm6150" path="kernel/xiaomi/sm6150"
+    revision="lineage-20" />
+
+  <!-- proprietary blobs -->
+  <project name="xiaomi-sm6150/proprietary_vendor_xiaomi_davinci" path="vendor/xiaomi/davinci"
+    revision="lineage-20" />
+  <project name="xiaomi-sm6150/proprietary_vendor_xiaomi_sm6150-common"
+    path="vendor/xiaomi/sm6150-common" revision="lineage-20" />
 </manifest>
