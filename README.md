@@ -1,6 +1,6 @@
 # Lineage for microG builds for the Xiaomi Mi 9T/Redmi K20 (davinci)
 
-[![Last release date badge](https://img.shields.io/github/release-date/krmax44/davinci-lineage-microg?label=last%20build)](https://github.com/krmax44/davinci-lineage-microg/releases/latest)
+[![Last release date badge](https://img.shields.io/github/release-date/krmax44/davinci-lineage-microg?display_date=published_at&label=last%20build)](https://github.com/krmax44/davinci-lineage-microg/releases/latest)
 ![LineageOS version 20](https://img.shields.io/badge/LineageOS-20.0-%23167c80)
 ![OTA updates available](https://img.shields.io/badge/OTA%20updates-yes-success)
 
