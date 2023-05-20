@@ -5,7 +5,7 @@ source .env
 
 tag=$(date "+%G%m%d")
 
-docker pull lineageos4microg/docker-lineage-cicd:lineage-20
+docker pull lineageos4microg/docker-lineage-cicd
 
 docker run \
     --env-file .env \
